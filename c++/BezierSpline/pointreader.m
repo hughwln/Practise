@@ -1,0 +1,13 @@
+clear all;
+close all;
+clc;
+pathname = 'C:\home\Code\matlab\data'; 
+fpoints = [pathname,'\input.txt'];
+fcontrol = [pathname,'\control.txt'];
+fresult = [pathname,'\result.txt'];
+points = load(fpoints);
+control = load(fcontrol);
+result = load(fresult);
+plot(points(:,1),points(:,2),'k-o');hold on;
+%plot(control(:,1),control(:,2),'k-*');hold on;
+plot(result(:,1),result(:,2),'r');hold on;
